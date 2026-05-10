@@ -24,13 +24,13 @@ from PIL import Image, ImageDraw, ImageFont
 
 # ── pytgcalls music imports (install: pip install py-tgcalls yt-dlp) ──
 try:
-    from pytgcalls import PyTgCalls, idle
-    from pytgcalls.types import Update as TgCallsUpdate
-    from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-    from pytgcalls.types.input_stream.quality import HighQualityAudio
+    from pytgcalls import PyTgCalls
+    from pytgcalls.types import MediaStream
     from pytgcalls.exceptions import (
         NoActiveGroupCall, AlreadyJoinedError, NotInGroupCallError
     )
+    AudioPiped = MediaStream
+    HighQualityAudio = None
     from pyrogram import Client
     from pyrogram.types import Message as PyroMessage
     MUSIC_ENABLED = True
