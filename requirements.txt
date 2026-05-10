@@ -9,5 +9,5 @@ six
 Pillow
 setuptools==65.5.0
 pyrogram==2.0.106
-py-tgcalls==0.9.18
+py-tgcalls
 yt-dlp
